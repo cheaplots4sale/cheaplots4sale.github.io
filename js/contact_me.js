@@ -18,7 +18,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://github.com/cheaplots4sale/cheaplots4sale.github.io/blob/master/mail/contact_me.php", //././mail/
+                url: "../cheaplots4sale.github.io/blob/master/mail/contact_me.php", //././mail/
                 type: "POST",
                 data: {
                     name: name,
