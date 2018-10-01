@@ -18,7 +18,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://github.com/cheaplots4sale/cheaplots4sale.github.io/blob/master/js/contact_me.js",
+                url: "https://github.com/cheaplots4sale/cheaplots4sale.github.io/blob/master/mail/contact_me.php", //././mail/
                 type: "POST",
                 data: {
                     name: name,
@@ -28,6 +28,7 @@ $(function() {
                 cache: false,
                 success: function() {
                     // Success message
+                    console.log("Success to send")
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -41,6 +42,7 @@ $(function() {
                 },
                 error: function() {
                     // Fail message
+                    console.log("Failed to send")
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
