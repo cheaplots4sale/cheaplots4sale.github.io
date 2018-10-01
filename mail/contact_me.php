@@ -1,17 +1,18 @@
 <?php
     // Check for empty fields
-    if(empty($_POST['name'])  		||
-       empty($_POST['email']) 		||
-       empty($_POST['message'])	||
-       !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-       {
-    	echo "No arguments Provided!";
+    if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+    {
+      echo "No arguments Provided!";
     	return false;
-       }
+    }
 
     $name = $_POST['name'];
     $email_address = $_POST['email'];
     $message = $_POST['message'];
+
+    echo $name;
+    echo $email_address;
+    echo $email_address;
 
     // Create the email and send the message
     $to = 'cheaplots4sale@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
